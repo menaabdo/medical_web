@@ -1,0 +1,32 @@
+/* -------------------------------------------------------------------------- */
+/*                              shared-components                             */
+/* -------------------------------------------------------------------------- */
+
+@import "./shared/_vars";
+@import "./shared/_media-queries";
+@import "./shared/_global";
+@import "./shared/navbar";
+
+/* -------------------------------------------------------------------------- */
+/*                              shared-components                             */
+/* -------------------------------------------------------------------------- */
+@import "./Components/Drawer.scss";
+@import "./shared/navbar.scss";
+@import "react-datepicker/dist/react-datepicker.css";
+@import "react-datepicker/dist/react-datepicker-cssmodules.css";
+@import "./Components/Sidebar";
+@import "./Components/HistoryOfRejectionModal";
+@import "./Components/ShowVideoModal";
+@import "./Components/Loader";
+
+/* -------------------------------------------------------------------------- */
+/*                              Pages                                         */
+/* -------------------------------------------------------------------------- */
+@import "./pages/RulesAndPermissions.scss";
+
+.fit-component{
+    width: fit-content;
+}
+textarea{
+    resize: none;
+}

@@ -1,0 +1,70 @@
+.parentSideBar {
+  margin-top: 70px;
+  position: fixed;
+  .sideBar {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    width: 250px;
+    height: 100vh;
+    z-index: 10;
+    background-color: white;
+    padding-bottom: 70px !important;
+    .ant-drawer-header {
+      display: none;
+    }
+    .ant-drawer-content,
+    .ant-drawer-content-wrapper {
+      width: fit-content !important;
+    }
+    .ant-drawer-body {
+      color: #aaaaaa;
+      width: fit-content;
+      // height: 100vh;
+      width: 100%;
+      .mainTitle {
+        color: #d8d8d8;
+      }
+
+      .activeTab {
+        position: relative;
+        label {
+          color: $primary-color-sky;
+        }
+        .sub-active-tab {
+          padding-top: 10px !important;
+          padding-bottom: 10px !important;
+          background: #eef9ff;
+          color: #122738;
+          border-radius: 4px;
+          font-weight: 500;
+        }
+        img {
+          filter: invert(15%) sepia(38%) saturate(580%) hue-rotate(169deg)
+            brightness(103%) contrast(105%);
+        }
+        &::after {
+          content: "";
+          display: block;
+          height: 100%;
+          width: 2px;
+          background-color: $primary-color-sky;
+          position: absolute;
+          // right: 10px;
+          left: 6px;
+          top: 0;
+        }
+      }
+      .tab {
+        padding: 10px;
+      }
+      a {
+        color: #aaaaaa;
+      }
+      @media (max-width: 768px) {
+        .tab > img {
+          display: none;
+        }
+      }
+    }
+  }
+}

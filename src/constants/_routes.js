@@ -1,0 +1,50 @@
+export const ROUTES = {
+  SIGNIN: "/",
+  DASHBOARD: "/statistics",
+  DOCTORS: "/doctors/allDoctors",
+  DOCTORDETAILS: "/doctors/details",
+  DOCTORSACTIVATIONPROCESS: "/doctors/activationProcess",
+  DOCTORSREJECTED: "/doctors/Rejected",
+  DOCTORACTIVATIONPROCESSDETAILS: "/doctors/activationProcessDetails",
+  DOCTORREJECTEDDETAILS: "/doctors/DoctorRejectedDetails",
+  NURSES: "/nurses",
+  NURSEDETAILS: "/nurses/details",
+  NURSESREJECTED: "/nurses/Rejected",
+  NURSESACTIVATIONPROCESS: "/nurses/activationProcess",
+  NURSEACTIVATIONPROCESSDETAILS: "/nurses/activationProcessDetails",
+  NURSEREJECTEDDETAILS: "/nurses/NurseRejectedDetails",
+  HOSPITALS: "/company",
+  HOSPITALDETAILS: "/company/details",
+  HOSPITALSREJECTED: "/company/Rejected",
+  HOSPITALSACTIVATIONPROCESS: "/company/activationProcess",
+  HOSPITALACTIVATIONPROCESSDETAILS: "/company/activationProcessDetails",
+  HOSPITALREJECTEDDETAILS: "/company/HospitalRejectedDetails",
+  SendMessage: "/messages/send",
+  ContactUsRequests: "/messages/receive",
+  ADMINS: "/rulesandpermissions/allusers",
+  RULESANDPERMISSIONS: "/rulesandpermissions/rules",
+  MYSETTING: "/rulesandpermissions/MySetting",
+  HOSPITALPACKAGE: "/company/package",
+  HOSPITALPACKAGEDETAILS: "/company/package/details",
+  // PACKAGES: "/packages/active",
+  // INACTIVEPACKAGES: "/packages/inactive",
+  ACTIVE_PACKAGES: "/packages/active",
+  INACTIVE_PACKAGES: "/packages/inactive",
+  EDIT_ACTIVE_PACKAGE: "/packages/active/edit",
+  EDIT_INACTIVE_PACKAGE: "/packages/inactive/edit",
+
+  ADD_PACKAGE: "/packages/add",
+
+  DELETED_ACCOUNTS: "/accounts/deleted_accounts",
+  LANDING_PAGE: "/siteSettings/landingPage",
+  ABOUT_US: "/siteSettings/aboutUs",
+  CONTACT_US: "/siteSettings/contactUs",
+  FAQ: "/siteSettings/faq",
+  ADDRESS: "/siteSettings/address",
+  DROPDOWNS: "/siteSettings/dropdowns",
+};
+
+export const pagesNotHaveNavbar = [];
+export const pagesNotHaveSideBar = [ROUTES.SIGNIN];
+export const pagesNotHaveSearchNav = [];
+export const pagesHaveEmptyCenteredNav = [ROUTES.SIGNIN];

@@ -1,0 +1,793 @@
+/* -------------------------------------------------------------------------- */
+/*                                   global                                   */
+/* -------------------------------------------------------------------------- */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+::-webkit-scrollbar-thumb {
+  background: $primary-color-sky;
+  border-radius: 5px;
+}
+.ant-breadcrumb-link {
+  &:hover {
+    background: transparent !important;
+  }
+}
+.css-1ka5eyc-MuiPaper-root-MuiMenu-paper-MuiPopover-paper {
+  max-height: 250px !important;
+}
+.css-oapmtd {
+  max-height: 250px !important;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.addBtn {
+  text-align: start !important;
+  &:hover {
+    color: $primary-color-sky !important;
+  }
+}
+.sub-section {
+  // overflow-x: auto !important;
+  margin: 1.5rem 0;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: $shadow;
+}
+.btn-primary-green-sm,
+.btn-primary-red-sm,
+.btn-primary-green-md,
+.btn-primary-green-xs {
+  &:hover {
+    color: #fff !important;
+  }
+}
+.specialties-section,
+.bio-section {
+  word-break: break-word;
+}
+.capsule-tabs {
+  .tab-capsule {
+    width: max-content;
+    height: 35px;
+    border-radius: 48px;
+    background: #fff;
+    padding: 0px 16px;
+    gap: 8px;
+    color: #545454;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 1.8882px 15.1056px rgba(0, 0, 0, 0.05);
+
+    &.active {
+      background: #66ccff;
+      color: #fff;
+    }
+    // @include to-tablet-sm {
+    //   height: 35px;
+    // }
+  }
+}
+.mostPopularBtn {
+  color: #000 !important;
+}
+
+.deleteBtn {
+  font-weight: bold !important;
+}
+.switchPackage {
+  font-weight: bold !important;
+  color: $grey-aa;
+}
+.mostPopularStar {
+  color: #ffc107;
+}
+
+.package-card {
+  padding: 10px;
+  .text-orange {
+    color: #ffc107;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+.table-container {
+  overflow: auto !important;
+  // white-space: nowrap; /* Prevent line breaks */
+
+  max-height: 57vh;
+  * {
+    transition: all 0.3s ease-in-out;
+  }
+  position: relative;
+}
+
+.ant-pagination {
+  position: sticky;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.ant-table-thead {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 1;
+
+  color: #122738;
+  & > tr > th {
+    background: #fff !important;
+    font-size: 16px !important;
+    font-family: "Poppins", sans-serif !important;
+    font-weight: 600 !important;
+  }
+}
+.ant-table-tbody td {
+  background: #fff !important;
+  font-size: 14px !important;
+  font-family: "Poppins", sans-serif !important;
+}
+// .ant-table-tbody td {
+// 	border-right: 2px solid #fff !important;
+// 	border-bottom: 2px solid #fff !important;
+// 	text-align: center;
+// }
+// .ant-pagination-item-link,
+// .ant-pagination-item {
+// 	border-radius: 50% !important;
+// }
+// .ant-pagination-item-active {
+// 	background: $primary-color-dark-blue !important;
+// 	color: #fff;
+// }
+
+.page {
+  overflow-x: auto !important;
+  padding-left: 270px !important;
+  margin-top: 70px;
+  background: $primary-background;
+  // background-image: url("../../images/pattern.png");
+  // background-size: auto;
+  // background-attachment: fixed;
+  padding: 2rem;
+  min-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  @include mobile-sm {
+    & {
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+    }
+  }
+  @include to-mobile-sm {
+    & {
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+    }
+  }
+}
+.background-grey {
+  background: #f7fafc;
+}
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   placeholder                              */
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                                   colors                                   */
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                                   inputs                                   */
+/* -------------------------------------------------------------------------- */
+$sizes: "sm", "md", "xmd", "lg";
+@mixin input-size($size) {
+  @if $size== "sm" {
+    width: 145px !important;
+    height: 60px !important;
+    font-size: 14px;
+    font-weight: 600;
+  } @else if $size== "md" {
+    width: 196px !important;
+    height: 60px !important;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  @if $size== "xmd" {
+    width: 312px !important;
+    height: 60px !important;
+    font-size: 14px;
+    font-weight: 600;
+  } @else if $size== "lg" {
+    width: 416px !important;
+    height: 60px !important;
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
+@each $size in $sizes {
+  .input-#{$size} {
+    @include input-size($size);
+  }
+}
+//Set the material ui input fields to border-red with red label color
+.ant-form-item-has-error {
+  .MuiInputBase-formControl,
+  .textArea {
+    border: 1px solid red !important;
+  }
+  .MuiInputLabel-root {
+    color: red !important;
+  }
+}
+/* -------------------------------------------------------------------------- */
+/*                                    fonts                                   */
+/* -------------------------------------------------------------------------- */
+$rubik-fonts: 40px, 32px, 28px, 24px, 20px, 18px, 16px, 14px;
+$poppins-fonts: 32px, 24px, 20px, 18px, 16px, 14px, 12px, 10px;
+$font-weights: 200, 300, 400, 500, 600, 700, 800, 900;
+
+@mixin rubik-fonts-weight($fontSize) {
+  @if ($fontSize== 32px) {
+    font-weight: 500;
+  } @else {
+    font-weight: 400;
+  }
+}
+
+@mixin poppins-fonts-weight($fontSize) {
+  @if ($fontSize== 40px) {
+    font-weight: 600;
+  } @else if($fontSize== 32px) {
+    font-weight: 500;
+  } @else if($fontSize== 24px) {
+    font-weight: 500;
+  } @else {
+    font-weight: 400;
+  }
+}
+
+@each $font in $rubik-fonts {
+  .f-rubik-#{$font} {
+    font-size: $font !important;
+    font-family: "Rubik", sans-serif !important;
+    @include rubik-fonts-weight($font);
+  }
+}
+@each $font in $poppins-fonts {
+  .f-poppins-#{$font} {
+    font-size: $font !important;
+    font-family: "Poppins", sans-serif !important;
+    @include poppins-fonts-weight($font);
+  }
+}
+@each $weight in $font-weights {
+  .fw-#{$weight} {
+    font-weight: $weight !important;
+  }
+}
+/* -------------------------------------------------------------------------- */
+/*                                   buttons                                  */
+/* -------------------------------------------------------------------------- */
+@mixin btn-size($size) {
+  @if $size== "xs" {
+    width: 85px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0;
+  } @else if $size== "sm" {
+    width: 165px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0;
+  } @else if $size== "md" {
+    width: 195px;
+    height: 48px;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 4px 0;
+  } @else if $size== "xmd" {
+    width: 312px;
+    height: 60px;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 4px 0;
+  } @else if $size== "lg" {
+    width: 416px;
+    height: 56px;
+    padding: 8px 0;
+    font-weight: 600;
+  }
+}
+
+@mixin btn-type($type) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  @if $type== "primary" {
+    background: $primary-color-sky;
+    color: $white;
+  } @else if $type== "primary-blue" {
+    background: $primary-color-blue;
+    color: $white;
+  } @else if $type== "secondary" {
+    border: 2px solid $primary-color-sky;
+    color: $primary-color-sky;
+    background: transparent;
+  } @else if $type== "text" {
+    color: $primary-color-sky;
+    background: transparent;
+    border: none;
+  } @else if $type== "primary-red" {
+    background: #dc3545;
+    color: $white;
+  } @else if $type== "primary-green" {
+    background: #20c997;
+    color: $white;
+  } @else if $type== "secondary-grey" {
+    border: 2px solid #545454;
+    color: #545454;
+    background: transparent;
+  }
+}
+@mixin btn-state($state, $type) {
+  @if $type== "primary" {
+    @if $state== "hover" {
+      background: $hover;
+      color: $white !important;
+    } @else if $state== "disabled" {
+      background: $grey-c8;
+    }
+  } @else if $type== "primary-blue" {
+    @if $state== "hover" {
+      background: $primary-color-blue;
+      color: $white;
+    } @else if $state== "disabled" {
+      background: $primary-color-blue;
+      color: $white;
+    }
+  } @else if $type== "primary-red" {
+    @if $state== "hover" {
+      background: #dc3545;
+      color: $white;
+    } @else if $state== "disabled" {
+      background: #dc3545;
+      color: $white;
+    }
+  } @else if $type== "primary-green" {
+    @if $state== "hover" {
+      background: #20c997;
+      color: $white;
+    } @else if $state== "disabled" {
+      background: #20c997;
+      color: $white;
+    }
+  } @else if $type== "secondary" {
+    @if $state== "hover" {
+      border: 2px solid $hover;
+      color: $hover;
+    } @else if $state== "disabled" {
+      color: $grey-c8;
+      border-color: $grey-c8;
+    }
+  } @else if $type== "text" {
+    box-shadow: none;
+    @if $state== "hover" {
+      color: $hover;
+      border: none !important;
+    } @else if $state== "disabled" {
+      color: $grey-c8;
+    } @else if $state== "focus" {
+      border: none;
+      outline: none;
+    }
+  }
+}
+
+$btn-sizes: "xs", "sm", "md", "xmd", "lg";
+$btn-types: "primary", "primary-blue", "secondary", "text", "primary-red",
+  "primary-green", "secondary-grey";
+@each $size in $btn-sizes {
+  @each $type in $btn-types {
+    .btn-#{$type}-#{$size} {
+      @include btn-size($size);
+      @include btn-type($type);
+    }
+    .btn-#{$type}-#{$size}:hover {
+      @include btn-state("hover", $type);
+    }
+    .btn-#{$type}-#{$size}:disabled {
+      @include btn-state("disabled", $type);
+    }
+    .btn-#{$type}-#{$size}:focus {
+      @include btn-state("focus", $type);
+    }
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    texts                                   */
+/* -------------------------------------------------------------------------- */
+@mixin text-color($type) {
+  @if $type== true {
+    color: $alert-success;
+  } @else if $type== false {
+    color: $alert-fail;
+  }
+}
+$text-colors: true, false;
+@each $color in $text-colors {
+  .text-#{$color} {
+    @include text-color($color);
+  }
+}
+/* -------------------------------------------------------------------------- */
+/*                                   states                                   */
+/* -------------------------------------------------------------------------- */
+$bg-colors: "green", "yellow", "red", "blue", "dark-red", "grey", "pending",
+  "light-blue", "dark-blue";
+@each $bg in $bg-colors {
+  .status-box-#{$bg} {
+    padding: 2px 8px;
+    border-radius: 4px;
+    color: #fff;
+    text-align: center;
+    width: fit-content;
+    &.fixed_width {
+      width: 100px;
+    }
+    @if $bg== "green" {
+      background-color: #17b003;
+    } @else if $bg== "red" {
+      background-color: #ff4800;
+    } @else if $bg== "yellow" {
+      background-color: #ffb875;
+    } @else if $bg== "blue" {
+      background-color: #ddf4ff;
+      color: #000;
+    } @else if $bg== "dark-red" {
+      background-color: #dc3545;
+    } @else if $bg== "grey" {
+      background-color: #aaaaaa;
+    } @else if $bg== "pending" {
+      background: #ffc107;
+    } @else if $bg== "light-blue" {
+      background-color: #ddf4ff;
+      color: #000 !important;
+    } @else if $bg== "dark-blue" {
+      background-color: #80cff6;
+      color: #000 !important;
+    }
+  }
+}
+
+bg-colors
+/* -------------------------------------------------------------------------- */
+/*                                global setup                                */
+/* -------------------------------------------------------------------------- */
+.text-underline {
+  text-decoration: underline;
+}
+.text-grey-54 {
+  color: $grey-54;
+}
+.flex-1 {
+  flex: 1;
+}
+
+.main-color {
+  color: $primary-color-sky !important;
+}
+
+.main-title {
+  color: $primary-color-dark-blue;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.ant-row {
+  width: fit-content;
+  margin: auto;
+}
+.fail-text {
+  color: $alert-fail;
+}
+
+.ant-form-item-explain-error {
+  text-align: left;
+}
+.form-container {
+  width: 50%;
+  background: #fff;
+  border-radius: 24px;
+  text-align: center;
+  margin: 40px auto;
+  height: fit-content;
+  padding: 72px 24px;
+  box-shadow: 0px 1.8882px 15.1056px rgba(0, 0, 0, 0.05);
+  position: relative;
+  .alert-box {
+    position: absolute;
+    // top: -45px;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: left;
+    .link-create-account,
+    .link-create-account:hover,
+    .link-create-account > a {
+      display: block;
+      text-decoration: underline;
+      cursor: pointer;
+      color: $grey-54 !important;
+      font-weight: 600;
+    }
+  }
+  .progress-container {
+    width: 416px;
+    margin: auto;
+    @include to-mobile-sm {
+      & {
+        width: 312px;
+      }
+    }
+  }
+  .form-side-title {
+    width: 416px;
+  }
+  .notes-text {
+    color: $alert-success;
+    margin: 0 6px;
+  }
+  .alert-text {
+    color: $alert-fail;
+    margin: 0 6px;
+  }
+  @include tablet-xs {
+    & {
+      width: 60%;
+    }
+  }
+
+  @include mobile-sm {
+    & {
+      width: 70%;
+    }
+  }
+  @include to-mobile-sm {
+    & {
+      width: 93%;
+    }
+  }
+  @include to-tablet-sm {
+    .form-side-title {
+      width: 312px;
+    }
+  }
+}
+
+[dir="rtl"] .arrow-back {
+  transform: rotate(180deg); /* reverse direction, for RTL */
+}
+.textArea-height {
+  height: 132px !important;
+}
+.calender-icon {
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+  cursor: pointer;
+}
+.react-datepicker-popper {
+  z-index: 888;
+  width: 50%;
+}
+.react-datepicker {
+  width: 100%;
+  position: absolute;
+  top: -4px;
+  right: -67%;
+}
+.react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle {
+  display: none;
+}
+.react-datepicker__month-container {
+  width: 100%;
+}
+.react-datepicker__header {
+  background-color: rgba(102, 204, 255, 40%);
+  border-bottom: 1px solid rgba(102, 204, 255, 40%);
+}
+.react-datepicker__navigation-icon {
+  top: 3px;
+}
+.ant-upload {
+  background: rgba(102, 204, 255, 0.05);
+  /* # 66CCFF */
+  border-radius: 8px;
+  border: 1px solid $primary-color-sky;
+}
+.ant-modal-content {
+  border-radius: 50px !important;
+  box-shadow: 0px 1.888198733329773px 15.105589866638184px 0px #0000000d !important;
+  padding: 48px, 32px, 32px, 32px !important;
+  border-radius: 24px !important;
+}
+.user_image {
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+}
+.totalCount {
+  margin-right: -40px !important;
+  @include mobile-sm {
+    & {
+      margin-right: 0px;
+    }
+  }
+  @include to-mobile-sm {
+    & {
+      margin-right: 0px;
+    }
+  }
+}
+.active-menu {
+  border: 1px solid $grey-aa;
+  margin-left: -45px;
+  padding: 5px;
+  border-radius: 7px;
+  @include mobile-sm {
+    & {
+      margin-left: 0px;
+    }
+  }
+  @include to-mobile-sm {
+    & {
+      margin-left: 0px;
+    }
+  }
+}
+// .MuiAutocomplete-hasPopupIcon.css-1h51icj-MuiAutocomplete-root
+//   .MuiFilledInput-root {
+//   width: 100% !important;
+// }
+.ant-form-item-row,
+.MuiFormControl-root {
+  @include mobile-sm {
+    & {
+      width: 100% !important;
+    }
+  }
+  @include to-mobile-sm {
+    & {
+      width: 100% !important;
+    }
+  }
+}
+
+.send-msg-modal {
+  .ant-form-item-row,
+  .MuiFormControl-root {
+    width: 100% !important;
+  }
+  .text-area {
+    input {
+      height: 100px !important;
+    }
+  }
+}
+.answer-section {
+  width: 100%;
+  .ant-form-item-row,
+  .MuiFormControl-root {
+    width: 100% !important;
+  }
+  .text-area {
+    input {
+      height: 100px !important;
+    }
+  }
+}
+
+.site-settings-link {
+  color: $primary-color-sky;
+  &:hover {
+    color: $primary-color-sky;
+  }
+}
+
+:where(.css-15rg2km).ant-tabs
+  .ant-tabs-tab.ant-tabs-tab-active
+  .ant-tabs-tab-btn {
+  color: $primary-color-sky;
+}
+
+:where(.css-dev-only-do-not-override-15rg2km).ant-tabs
+  .ant-tabs-tab.ant-tabs-tab-active
+  .ant-tabs-tab-btn {
+  color: $primary-color-sky;
+  &:hover {
+    color: $primary-color-sky;
+  }
+}
+
+:where(.css-dev-only-do-not-override-15rg2km).ant-tabs .ant-tabs-ink-bar {
+  background-color: $primary-color-sky;
+}
+
+:where(.css-dev-only-do-not-override-15rg2km).ant-tabs .ant-tabs-tab-btn:hover {
+  color: $primary-color-sky;
+}
+
+:where(.css-15rg2km).ant-tabs .ant-tabs-tab-btn:active {
+  color: $primary-color-sky !important;
+}
+
+:where(.css-15rg2km).ant-tabs .ant-tabs-tab-btn:hover {
+  color: $primary-color-sky !important;
+}
+
+:where(.css-15rg2km).ant-tabs .ant-tabs-tab-btn:focus:not(:focus-visible) {
+  color: $primary-color-sky !important;
+}
+
+:where(.css-15rg2km).ant-tabs-top > .ant-tabs-nav .ant-tabs-ink-bar {
+  background-color: $primary-color-sky !important;
+}
+
+.status-icon {
+  width: 70px;
+  height: auto;
+  top: 0px !important;
+  right: 0px !important;
+  left: 0px !important;
+  bottom: 0px !important;
+}

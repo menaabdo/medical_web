@@ -1,0 +1,130 @@
+.nav {
+  background-color: white;
+  position: fixed;
+  transition: all 0.2s linear !important;
+  left: 0;
+  margin: auto;
+  top: 0;
+  width: 100%;
+
+  // -webkit-margin-end: 1rem;
+  // margin-inline-end: 1rem;
+  z-index: 10;
+  // &::after {
+  //   content: "";
+  //   width: 100%;
+  //   height: 100%;
+  //   position: absolute;
+  //   top: -1rem;
+  //   z-index: -1;
+  //   // -webkit-backdrop-filter: blur(8px);
+  //   // backdrop-filter: blur(8px);
+  //   background-color: white;
+  // }
+  .nav-items {
+    height: 84px;
+    display: flex;
+    align-items: center;
+    // padding: 0 72px;
+    padding-right: 30px;
+    box-shadow: 0px 1.888198733329773px 15.105589866638184px 0px rgba
+      (0, 0, 0, 0.05);
+    @include to-tablet-sm {
+      & {
+        padding: 16px 20px;
+        height: 64px;
+      }
+      &.nav-extender {
+        height: 84px !important;
+      }
+    }
+    @include to-desktop-sm {
+      & {
+        padding: 0 21px;
+      }
+    }
+    .logo {
+      min-width: 75px;
+      min-height: 30px;
+      // margin-inline-end: 41px;
+      // @include to-tablet-lg {
+      //   & {
+      //     margin-inline-end: 21px;
+      //   }
+      // }
+    }
+    .nav-links {
+      margin-inline-end: 57px;
+      @include to-desktop-sm {
+        & {
+          margin-inline-end: 32px;
+        }
+      }
+      @include to-tablet-lg {
+        & {
+          margin-inline-end: 18px;
+        }
+      }
+      &.active {
+        color: $primary-color-sky;
+      }
+    }
+    .search-form {
+      position: relative;
+      input {
+        width: 300px;
+        height: 42px;
+        padding-inline-start: 51px;
+        padding-inline-end: 15px;
+        border: 1px solid $primary-color-sky;
+        color: $primary-color-sky;
+        border-radius: 100px;
+        outline: none;
+        @include to-tablet-lg {
+          & {
+            width: 165px;
+            padding-inline-start: 41px;
+            font-size: 14px;
+          }
+        }
+        &::placeholder {
+          color: $primary-color-sky;
+          font-size: 12px;
+        }
+      }
+      .searchPrimary {
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        transform: translateY(-50%);
+      }
+    }
+    .hamburger-icon-container {
+      height: 40px;
+      width: 93px;
+      border-radius: 100px;
+      padding: 0px 16px 0px 16px;
+      justify-content: space-between;
+      background: #f5f5f5;
+      display: flex;
+      align-items: center;
+      justify-self: center;
+      .avatar-img {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+      }
+      @include to-tablet-sm {
+        & {
+          width: 72px;
+          height: 32px;
+          padding: 0 8px;
+          .avatar-img {
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+    }
+  }
+}
